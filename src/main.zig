@@ -307,7 +307,7 @@ pub fn main(init: std.process.Init) !void {
                     .link = 0,
                     .info = 0,
                     .entsize = 0,
-                    .vaddr = 0,
+                    .vaddr = @as(u32, @intCast(section.base_vaddr)),
                 });
             }
 
